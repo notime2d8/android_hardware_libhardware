@@ -108,6 +108,7 @@ typedef enum {
  * Beyond this point are things only used by HWC1, which should be ignored when
  * implementing a HWC2 device
  ******************************************************************************/
+#define LayerNameLength 60
 
 enum {
     /* hwc_composer_device_t::set failed in EGL */
@@ -186,7 +187,9 @@ enum {
        cursor overlay hardware. hwcomposer will also all async position updates
        of this layer outside of the normal prepare()/set() loop. Added in
        HWC_DEVICE_API_VERSION_1_4. */
-    HWC_CURSOR_OVERLAY =  5
+    HWC_CURSOR_OVERLAY =  5,
+    HWC_NODRAW,
+    HWC_MIX,
  };
 /*
  * hwc_layer_t::blending values
