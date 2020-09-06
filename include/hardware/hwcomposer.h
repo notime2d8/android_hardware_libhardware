@@ -178,6 +178,7 @@ typedef struct hwc_layer_1 {
              * The visible region INCLUDES areas overlapped by a translucent layer.
              */
             hwc_region_t visibleRegionScreen;
+    	    char LayerName[LayerNameLength + 1];            
 
             /* Sync fence object that will be signaled when the buffer's
              * contents are available. May be -1 if the contents are already
